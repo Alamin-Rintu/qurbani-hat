@@ -9,7 +9,7 @@
     "age": 3,
     "location": "Bogura",
     "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural food.",
-    "image": "https://i.postimg.cc/YS1Q9XhG/cow1.jpg",
+    "image": "https://i.ibb.co.com/Q3jsr3xx/Deshi-Shahi-Cow.jpg",
     "category": "Large Animal",
     "featured": true
   },
@@ -23,7 +23,7 @@
     "age": 4,
     "location": "Rajshahi",
     "description": "Strong and healthy Sahiwal breed cow. Perfect for Qurbani.",
-    "image": "https://i.postimg.cc/8z7JZz5P/cow2.jpg",
+    "image": "https://i.ibb.co.com/HDGQvgCH/Sahiwal-Premium-Cow.jpg",
     "category": "Large Animal",
     "featured": true
   },
@@ -37,7 +37,7 @@
     "age": 5,
     "location": "Dhaka",
     "description": "Large Brahman cow with excellent body structure.",
-    "image": "https://i.postimg.cc/4y7QW3Hn/cow3.jpg",
+    "image": "https://i.ibb.co.com/Kc1vp7cc/Brahman-Giant-Cow.jpg",
     "category": "Large Animal",
     "featured": true
   },
@@ -51,7 +51,7 @@
     "age": 1.5,
     "location": "Dinajpur",
     "description": "Popular Black Bengal goat with very tasty meat.",
-    "image": "https://i.postimg.cc/Z5pQ6QkB/goat1.jpg",
+    "image": "https://i.ibb.co.com/rftL9D09/Black-Bengal-Goat.jpg",
     "category": "Small Animal",
     "featured": true
   },
@@ -65,7 +65,7 @@
     "age": 2,
     "location": "Khulna",
     "description": "Premium Jamunapari goat with attractive appearance.",
-    "image": "https://i.postimg.cc/1z8Q8n6M/goat2.jpg",
+    "image": "https://i.ibb.co.com/Dfqm1pfH/Jamunapari-Goat.jpg",
     "category": "Small Animal",
     "featured": false
   },
@@ -79,7 +79,7 @@
     "age": 3,
     "location": "Chattogram",
     "description": "Hybrid deshi cow, healthy and well-maintained.",
-    "image": "https://i.postimg.cc/fb5Yd2vC/cow4.jpg",
+    "image": "https://i.ibb.co.com/d9Hhk75/Hybrid-Deshi-Cow.webp",
     "category": "Large Animal",
     "featured": false
   }
