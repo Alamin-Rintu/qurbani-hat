@@ -2,7 +2,6 @@ import { Button, Chip } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { TbCoinTaka } from "react-icons/tb";
 
 const AnimalsCard = ({ animal }) => {
   console.log(animal);
@@ -31,7 +30,7 @@ const AnimalsCard = ({ animal }) => {
 
       <div className="flex justify-between items-center">
         <p className="flex items-center gap-2">
-          {price} <TbCoinTaka className="text-xl" />
+          {price} BDT
         </p>
         <p>{weight} KG</p>
       </div>

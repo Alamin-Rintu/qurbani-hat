@@ -1,7 +1,7 @@
 import AnimalsCard from "@/components/AnimalsCard";
 
 const AllAnimalsPage = async () => {
-  const res = await fetch("https://qurbani-hat-brown.vercel.app/data.json");
+  const res = await fetch("https://qurbani-hat-rintu.vercel.app/data.json");
   const animals = await res.json();
   return (
     <div className="container mx-auto mt-5">
