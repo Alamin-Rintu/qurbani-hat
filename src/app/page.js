@@ -7,8 +7,8 @@ export default function Home() {
   return (
   <div className="container mx-auto">
     <Banner/>
-    <QurbaniTips/>
     <FeaturedAnimals/>
+    <QurbaniTips/>
   </div>
   );
 }
