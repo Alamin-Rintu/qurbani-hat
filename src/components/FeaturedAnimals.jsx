@@ -4,7 +4,7 @@ import { Button } from "@heroui/react";
 import { FaAnglesDown } from "react-icons/fa6";
 
 const FeaturedAnimals = async () => {
-  const res = await fetch("https://qurbani-hat-el69.vercel.app/data.json");
+  const res = await fetch("https://qurbani-hat-el69.vercel.app/data.json" ,{cache:"no-store"});
   const animals = await res.json();
   const eidAnimal = animals.slice(0, 4);
   return (
