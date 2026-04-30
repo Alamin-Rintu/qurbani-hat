@@ -6,15 +6,17 @@ import { FaBirthdayCake } from "react-icons/fa";
 import { GrMoney } from "react-icons/gr";
 import { IoLocationSharp } from "react-icons/io5";
 import { PiCowFill } from "react-icons/pi";
+import data from "../../../../public/data.json"
 
 const AnimalDetailsPage = async ({ params }) => {
   const { id } = await params;
 
-  const res = await fetch("https://qurbani-hat-el69.vercel.app/data.json" ,{cache:"no-store"});
+  // const res = await fetch("http://localhost:3000/data.json" ,{cache:"no-store"});
 
-  const animals = await res.json();
+  // const animals = await res.json();
+  
 
-  const animal = animals.find((animal) => animal.id === Number(id));
+  const animal = data.find((animal) => animal.id === Number(id));
 
   if (!animal) {
     return (

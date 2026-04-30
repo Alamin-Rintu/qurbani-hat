@@ -2,11 +2,13 @@ import Link from "next/link";
 import AnimalsCard from "./AnimalsCard";
 import { Button } from "@heroui/react";
 import { FaAnglesDown } from "react-icons/fa6";
+import data from "../../public/data.json"
+
 
 const FeaturedAnimals = async () => {
-  const res = await fetch("https://qurbani-hat-el69.vercel.app/data.json" ,{cache:"no-store"});
-  const animals = await res.json();
-  const eidAnimal = animals.slice(0, 4);
+  // const res = await fetch("http://localhost:3000/data.json" ,{cache:"no-store"});
+  // const animals = await res.json();
+  const eidAnimal = data.slice(0, 4);
   return (
     <div>
       <h2 className="font-bold text-2xl my-3">Featured animals</h2>
