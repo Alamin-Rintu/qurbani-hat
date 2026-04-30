@@ -3,7 +3,6 @@ import { authClient } from "@/lib/auth-client";
 import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
 import {
   Button,
-  Description,
   FieldError,
   Form,
   Input,
@@ -11,6 +10,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { router } from "better-auth/api";
 import Link from "next/link";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
@@ -23,7 +23,6 @@ const LoginPage = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log({ email, password });
 
     const { data, error } = await authClient.signIn.email({
       email,
@@ -32,10 +31,11 @@ const LoginPage = () => {
       callbackURL: "/",
     });
     if (data) {
-      toast.success("data.messeage");
+      toast.success("Login successful");
     }
+
     if (error) {
-      toast.error("data.error");
+      toast.error(error.message);
     }
   };
 
@@ -44,10 +44,12 @@ const LoginPage = () => {
       provider: "google",
     });
     if (data) {
-      toast.success("Login Successful");
+      toast.success("Login successful");
+      router.push('/')
     }
+
     if (error) {
-      toast.error("data.error");
+      toast.error(error.message);
     }
   };
 
@@ -90,10 +92,11 @@ const LoginPage = () => {
         </TextField>
 
         {/* password */}
-        <TextField className="w-full " name="password">
+        <TextField className="w-full ">
           <Label>Password</Label>
           <InputGroup>
             <InputGroup.Input
+              name="password"
               className="w-full max-w-[280px]"
               type={isVisible ? "text" : "password"}
               placeholder="Your Password"
@@ -125,16 +128,16 @@ const LoginPage = () => {
             Reset
           </Button>
         </div>
-        {/* <p className="font-semibold">
-          Already have an account?
-          <Link href={"/login"}>
+        <p className="font-semibold">
+          No account?
+          <Link href={"/register"}>
             <Button
               className={"text-purple-500 font-medium text-lg bg-transparent"}
             >
-              Log in
+              Create one
             </Button>
           </Link>
-        </p> */}
+        </p>
       </Form>
     </div>
   );

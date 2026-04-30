@@ -12,27 +12,36 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
+  const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
+
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const image = e.target.image.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log({ name, image, email, password });
 
     const { data, error } = await authClient.signUp.email({
       name,
       email,
       password,
       image,
-      callbackURL: "/",
     });
-    console.log(data, error);
+    if (data) {
+      toast.success("Login successful");
+      router.push("/login");
+    }
+
+    if (error) {
+      toast.error(error.message);
+    }
   };
 
   const handleWithGoogle = async () => {
@@ -40,10 +49,12 @@ const RegisterPage = () => {
       provider: "google",
     });
     if (data) {
-      toast.success("Login Successful");
+      toast.success("Login successful");
+      router.push('/')
     }
+
     if (error) {
-      toast.error("data.error");
+      toast.error(error.message);
     }
   };
 
@@ -107,11 +118,12 @@ hover:shadow-lg transition-all duration-300 ease-in-out group"
         </TextField>
 
         {/* password */}
-        <TextField className="w-full " name="password">
+        <TextField className="w-full ">
           <Label>Password</Label>
           <InputGroup>
             <InputGroup.Input
               className="w-full max-w-[280px]"
+              name="password"
               type={isVisible ? "text" : "password"}
               placeholder="Your Password"
             />

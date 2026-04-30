@@ -6,7 +6,7 @@ import { FaAnglesDown } from "react-icons/fa6";
 const FeaturedAnimals = async () => {
   const res = await fetch("https://qurbani-hat-rintu.vercel.app/data.json");
   const animals = await res.json();
-  const eidAnimal = animals.slice(0, 3);
+  const eidAnimal = animals.slice(0, 4);
   return (
     <div>
       <h2 className="font-bold text-2xl my-3">Featured animals</h2>
