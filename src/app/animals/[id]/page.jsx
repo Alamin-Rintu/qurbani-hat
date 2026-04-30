@@ -10,7 +10,7 @@ import { PiCowFill } from "react-icons/pi";
 const AnimalDetailsPage = async ({ params }) => {
   const { id } = await params;
 
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch("https://qurbani-hat-el69.vercel.app/data.json");
 
   const animals = await res.json();
 
