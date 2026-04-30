@@ -14,9 +14,9 @@ const AnimalDetailsPage = async ({ params }) => {
 
   const animals = await res.json();
 
-  const eidAnimal = animals.find((animal) => animal.id === Number(id));
+  const animal = animals.find((animal) => animal.id === Number(id));
 
-  if (!eidAnimal) {
+  if (!animal) {
     return (
       <div className="text-center mt-10 text-red-500 text-xl">
         Animal not found
@@ -29,14 +29,14 @@ const AnimalDetailsPage = async ({ params }) => {
       <div className="grid md:grid-cols-2 gap-10 items-center">
         <div className="relative w-full aspect-square overflow-hidden">
           <Image
-            src={eidAnimal.image}
+            src={animal.image}
             fill
-            alt={eidAnimal.name}
+            alt={animal.name}
             className="object-cover p-2 rounded-xl"
           />
 
           <span className="absolute top-3 right-3 bg-black/70 text-white text-sm px-3 py-1 rounded-full">
-            <Chip>{eidAnimal.category}</Chip>
+            <Chip>{animal.category}</Chip>
           </span>
         </div>
 
