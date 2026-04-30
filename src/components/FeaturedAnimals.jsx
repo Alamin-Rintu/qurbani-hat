@@ -22,7 +22,7 @@ const FeaturedAnimals = async () => {
         <Link href={"/animals"}>
           <Button
             className={
-              "bg-purple-500 text-white font-bold text-lg hover:bg-purple-700"
+              "bg-purple-500 text-white font-bold text-lg hover:bg-purple-600"
             }
             variant="outline"
           >

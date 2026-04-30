@@ -1,6 +1,5 @@
 import AnimalsCard from "@/components/AnimalsCard";
-import data from "../../../public/data.json"
-
+import data from "../../../public/data.json";
 
 const AllAnimalsPage = async () => {
   // const res = await fetch("http://localhost:3000/data.json" ,{cache:"no-store"});
