@@ -13,6 +13,8 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { useState } from "react";
+import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,8 +31,26 @@ const LoginPage = () => {
       rememberMe: true,
       callbackURL: "/",
     });
-    console.log(data, error);
+    if (data) {
+      toast.success("data.messeage");
+    }
+    if (error) {
+      toast.error("data.error");
+    }
   };
+
+  const handleWithGoogle = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+    if (data) {
+      toast.success("Login Successful");
+    }
+    if (error) {
+      toast.error("data.error");
+    }
+  };
+
   return (
     <div className="flex justify-center mt-5">
       <Form
@@ -38,6 +58,19 @@ const LoginPage = () => {
         onSubmit={onSubmit}
       >
         <h3 className="text-center text-2xl font-bold">LogIn Now</h3>
+        {/* google */}
+        <div
+          onClick={handleWithGoogle}
+          className="flex items-center justify-center gap-3 border border-gray-300 px-6 py-3 rounded-2xl cursor-pointer 
+        hover:bg-gradient-to-r hover:from-blue-100 hover:to-blue-200 
+        hover:shadow-lg transition-all duration-300 ease-in-out group"
+        >
+          <FcGoogle className="text-3xl transition-transform duration-300 group-hover:scale-110" />
+
+          <span className="font-medium text-gray-700 group-hover:text-black">
+            Continue with Google
+          </span>
+        </div>
 
         {/* email */}
 
@@ -63,6 +96,7 @@ const LoginPage = () => {
             <InputGroup.Input
               className="w-full max-w-[280px]"
               type={isVisible ? "text" : "password"}
+              placeholder="Your Password"
             />
             <InputGroup.Suffix className="pr-0">
               <Button
