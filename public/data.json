@@ -82,5 +82,48 @@
     "image": "https://i.ibb.co.com/d9Hhk75/Hybrid-Deshi-Cow.webp",
     "category": "Large Animal",
     "featured": false
+  },
+  {
+    "id": 7,
+    "name": "Arabian Camel",
+    "type": "Camel",
+    "breed": "Arabian",
+    "price": 350000,
+    "weight": 600,
+    "age": 6,
+    "location": "Dhaka",
+    "description": "Imported Arabian camel suitable for large Qurbani shares.",
+    "image": "https://i.ibb.co.com/TBCk99zk/Arabian-Camel.webp",
+    "category": "Large Animal",
+    "featured": true
+  },
+  
+  {
+    "id": 8,
+    "name": "Local Sheep",
+    "type": "Sheep",
+    "breed": "Deshi",
+    "price": 18000,
+    "weight": 25,
+    "age": 1.2,
+    "location": "Rangpur",
+    "description": "Healthy local sheep, perfect for small Qurbani.",
+    "image": "https://i.ibb.co.com/JWtznSB7/Local-Sheep.jpg",
+    "category": "Small Animal",
+    "featured": true
+  },
+  {
+    "id": 9,
+    "name": "Garole Sheep",
+    "type": "Sheep",
+    "breed": "Garole",
+    "price": 22000,
+    "weight": 28,
+    "age": 1.5,
+    "location": "Barisal",
+    "description": "Garole sheep known for quality meat and compact size.",
+    "image": "https://i.ibb.co.com/chYZs2Ym/Garole-Sheep.jpg",
+    "category": "Small Animal",
+    "featured": false
   }
 ]
