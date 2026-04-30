@@ -1,4 +1,5 @@
 // "use client"
+import BookingAnimal from "@/components/BookingAnimal";
 import { Chip } from "@heroui/react";
 import Image from "next/image";
 import { FaBirthdayCake } from "react-icons/fa";
@@ -27,7 +28,7 @@ const AnimalDetailsPage = async ({ params }) => {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 gap-10 items-center">
         <div className="relative w-full aspect-square overflow-hidden">
           <Image
             src={animal.image}
@@ -63,39 +64,9 @@ const AnimalDetailsPage = async ({ params }) => {
           <p className="text-2xl font-bold text-green-600 flex items-center gap-2">
             <GrMoney /> {animal.price} BDT
           </p>
-
-          <div className="mt-6 border p-4 rounded-xl space-y-3">
-            <h2 className="text-xl font-semibold">Book This Animal</h2>
-
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full border p-2 rounded-lg"
-            />
-
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full border p-2 rounded-lg"
-            />
-
-            <input
-              type="text"
-              placeholder="Phone Number"
-              className="w-full border p-2 rounded-lg"
-            />
-
-            <textarea
-              placeholder="Address"
-              className="w-full border p-2 rounded-lg"
-            />
-
-            <button className="w-full bg-black text-white py-2 rounded-xl hover:bg-gray-800">
-              Confirm Booking
-            </button>
-          </div>
         </div>
       </div>
+      <BookingAnimal/>
     </div>
   );
 };
