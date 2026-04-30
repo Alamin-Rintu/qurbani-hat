@@ -10,13 +10,13 @@ import { PiCowFill } from "react-icons/pi";
 const AnimalDetailsPage = async ({ params }) => {
   const { id } = await params;
 
-  const res = await fetch("https://qurbani-hat-rintu.vercel.app/data.json");
+  const res = await fetch("http://localhost:3000/data.json");
 
   const animals = await res.json();
 
-  const animal = animals.find((animal) => animal.id === Number(id));
+  const eidAnimal = animals.find((animal) => animal.id === Number(id));
 
-  if (!animal) {
+  if (!eidAnimal) {
     return (
       <div className="text-center mt-10 text-red-500 text-xl">
         Animal not found
@@ -29,14 +29,14 @@ const AnimalDetailsPage = async ({ params }) => {
       <div className="grid md:grid-cols-2 gap-10 items-center">
         <div className="relative w-full aspect-square overflow-hidden">
           <Image
-            src={animal.image}
+            src={eidAnimal.image}
             fill
-            alt={animal.name}
+            alt={eidAnimal.name}
             className="object-cover p-2 rounded-xl"
           />
 
           <span className="absolute top-3 right-3 bg-black/70 text-white text-sm px-3 py-1 rounded-full">
-            <Chip>{animal.category}</Chip>
+            <Chip>{eidAnimal.category}</Chip>
           </span>
         </div>
 

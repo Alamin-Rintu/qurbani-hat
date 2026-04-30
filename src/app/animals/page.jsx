@@ -1,7 +1,7 @@
 import AnimalsCard from "@/components/AnimalsCard";
 
 const AllAnimalsPage = async () => {
-  const res = await fetch("https://qurbani-hat-rintu.vercel.app/data.json");
+  const res = await fetch("http://localhost:3000/data.json");
   const animals = await res.json();
   const sortedAnimals = animals.sort((a, b) => a.price - b.price);
   return (
