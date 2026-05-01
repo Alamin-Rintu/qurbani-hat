@@ -111,8 +111,8 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <Link href="/login">Log In</Link>
-              <Link href="/register">Register</Link>
+              <Link className="font-medium" href="/login">Log In</Link>
+              <Link className="font-medium" href="/register">Register</Link>
             </>
           )}
         </div>
