@@ -16,7 +16,7 @@ const Banner = () => {
           </p>
 
           <div className="flex gap-4">
-            <Link href="/pricing">
+            <Link href="/animals">
               <Button
                 variant="outline"
                 className="text-white hover:bg-purple-500"

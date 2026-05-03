@@ -1,18 +1,14 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ToastContainer } from "react-toastify";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppinsFont = Poppins({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Qurbani-hat",
@@ -23,12 +19,12 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${poppinsFont.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
         <main>{children}</main>
-        <Footer/>
+        <Footer />
         <ToastContainer position="top-center" autoClose={800} />
       </body>
     </html>
